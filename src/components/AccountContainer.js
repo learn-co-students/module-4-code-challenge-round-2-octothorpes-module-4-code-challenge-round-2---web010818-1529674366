@@ -53,7 +53,7 @@ class AccountContainer extends Component {
     return (
       <div>
         <Search changeHandler={this.handleChange} />
-        {this.state.filteredTransactions.length === 0 ? <TransactionsList transactions={this.state.transactions}/> : <TransactionsList transactions={this.state.filteredTransactions}/>}
+        {this.state.filteredTransactions.length === 0 || this.state.searchTerm === "" ? <TransactionsList transactions={this.state.transactions}/> : <TransactionsList transactions={this.state.filteredTransactions}/>}
       </div>
     )
   }
